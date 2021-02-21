@@ -29,5 +29,6 @@ namespace Business.Concrete
         {
             return _productDal.GetAll(p => p.UnitPrice >= min && p.UnitPrice <= max);
         }
+
     }
 }
