@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "q0sNmzEpJsiDN5V3K0Ck1yDQw2yqliLFN3ivnxF8+7p1KQefXXR1Zd7njYN2jgnsZTgSh5tu55OcR+U5jcwVEQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\serca\\source\\repos\\FinalProject\\Business\\Business.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\serca\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\serca\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
