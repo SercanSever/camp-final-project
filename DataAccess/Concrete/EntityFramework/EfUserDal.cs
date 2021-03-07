@@ -6,11 +6,14 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Linq;
+using Core.Utilities.Results;
 
 namespace DataAccess.Concrete.EntityFramework
 {
+
     public class EfUserDal : EfEntityRepositoryBase<User, NorthwindContext>, IUserDal
     {
+
         public List<OperationClaim> GetClaims(User user)
         {
             using (var context = new NorthwindContext())
