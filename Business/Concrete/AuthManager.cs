@@ -61,7 +61,7 @@ namespace Business.Concrete
             return new SuccessDataResult<User>(user, Messages.UserRegistered);
         }
 
-        public IResult UserExist(string email)
+        public IResult UserExists(string email)
         {
             if (_userService.GetByEmail(email).Data == null)
             {

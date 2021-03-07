@@ -19,12 +19,12 @@ namespace Business.Concrete
 
         public IDataResult<List<Category>> GetAll()
         {
-            return new SuccessResult<List<Category>>(_categoryDal.GetAll());
+            return new SuccessDataResult<List<Category>>(_categoryDal.GetAll());
         }
 
         public IDataResult<Category> GetById(int categoryId)
         {
-            return new SuccessResult<Category>(_categoryDal.Get(p => p.CategoryId == categoryId));
+            return new SuccessDataResult<Category>(_categoryDal.Get(p => p.CategoryId == categoryId));
         }
     }
 }
