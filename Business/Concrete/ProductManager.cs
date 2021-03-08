@@ -3,6 +3,8 @@ using Business.BusinessAspects.Autofac;
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Caching;
+using Core.Aspects.Autofac.Performance;
+using Core.Aspects.Autofac.Transaction;
 using Core.Aspects.Autofac.Validation;
 using Core.CrossCuttingConcerns.Validation;
 using Core.Utilities.Business;
@@ -43,6 +45,7 @@ namespace Business.Concrete
         }
 
         [CacheAspect]
+        //[PerformanceAspect(5)] // Global Yapıldı
         public IDataResult<List<Product>> GetAll()
         {
             return new SuccessDataResult<List<Product>>(_productDal.GetAll(), Messages.ProductsListed);
@@ -78,7 +81,6 @@ namespace Business.Concrete
         [TransactionScopeAspect]
         public IResult AddTransactionTest(Product product)
         {
-
             Add(product);
             if (product.UnitPrice < 10)
             {
@@ -87,7 +89,6 @@ namespace Business.Concrete
             Add(product);
             return null;
         }
-
 
         //Business
         private IResult CheckIfProductCountOfCategoryCorrect(int categoryId)
