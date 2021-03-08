@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace WebAPI.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
@@ -22,7 +22,7 @@ namespace WebAPI.Controllers
             _productService = productService;
         }
 
-        [HttpGet("getAll")]
+        [HttpGet]
         public IActionResult GetAll()
         {
             var result = _productService.GetAll();
