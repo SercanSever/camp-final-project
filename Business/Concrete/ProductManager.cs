@@ -91,7 +91,7 @@ namespace Business.Concrete
         }
 
         //Business
-        private IResult CheckIfProductCountOfCategoryCorrect(int categoryId)
+        private IResult CheckIfProductCountOfCategoryCorrect(int? categoryId)
         {
 
             int result = _productDal.GetAll(p => p.CategoryId == categoryId).Count;
