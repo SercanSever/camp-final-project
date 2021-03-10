@@ -8,7 +8,7 @@ namespace DataAccess.Concrete.Context
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"server=(localdb)\MSSQLLocalDB;database=Northwind;Trusted_Connection=true");
+            optionsBuilder.UseSqlServer(@"server=DESKTOP-C0CF0A0;database=NORTHWND;Trusted_Connection=true");
         }
 
         public DbSet<Product> Products { get; set; }
