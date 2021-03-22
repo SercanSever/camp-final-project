@@ -38,7 +38,7 @@ namespace WebAPI.Controllers
             var result = _productService.GetById(id);
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
             return BadRequest(result.Message);
         }
@@ -48,7 +48,7 @@ namespace WebAPI.Controllers
             var result = _productService.GetAllByCategoryId(categoryId);
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
             return BadRequest(result.Message);
         }
@@ -59,7 +59,7 @@ namespace WebAPI.Controllers
             var result = _productService.Add(product);
             if (result.Success)
             {
-                return Ok(result.Message);
+                return Ok(result);
             }
             return BadRequest(result.Message);
         }
